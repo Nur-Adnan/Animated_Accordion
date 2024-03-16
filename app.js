@@ -1,4 +1,4 @@
-const accordians = document.querySelectorAll(".accordion");
+const accordians = document.querySelectorAll(".accordian");
 
 accordians.forEach((accordian) => {
   const icon = accordian.querySelector(".icon");
@@ -7,10 +7,10 @@ accordians.forEach((accordian) => {
   accordian.addEventListener("click", () => {
     if (icon.classList.contains("active")) {
       icon.classList.remove("active");
-      answer.classList.maxHeight("active");
+      answer.style.maxHeight = null;
     } else {
       icon.classList.add("active");
-      answer.classList.maxHeight("active");
+      answer.style.maxHeight = answer.scrollHeight + "px";
     }
   });
 });
